@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Data/outputs
+/data/
+/results/
+/figures/
+/archive/
+/tests/
+/scripts/analysis/bnn/figures/
+
+# IDE
+.idea/

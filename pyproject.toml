@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sou-paper"
+version = "0.1.0"
+description = "Code to reproduce the figures and experiments for the Sources of Uncertainty paper."
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+  "numpy>=2.4,<2.5",
+  "scipy>=1.17,<1.18",
+  "matplotlib>=3.10,<3.11",
+  "seaborn>=0.13,<0.14",
+  "pandas>=3.0,<3.1",
+  "scikit-learn>=1.8,<1.9",
+  "tqdm>=4.67,<4.68",
+]
+
+[project.optional-dependencies]
+bnn = [
+  "torch>=2.10,<2.11",
+]
+horseshoe = [
+  "rpy2>=3.5,<3.6",
+]
+full = [
+  "torch>=2.10,<2.11",
+  "rpy2>=3.5,<3.6",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["sou*"]
